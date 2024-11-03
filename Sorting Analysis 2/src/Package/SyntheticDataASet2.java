@@ -1,7 +1,7 @@
 package Package;
 
-import java.util.Random;
-/**
+import java.security.SecureRandom;
+import java.util.Random;/**
 
 * Generating data from random function
 * and calling different sorting Algorithm 
@@ -9,6 +9,7 @@ import java.util.Random;
 *
 * @author  chhavi Gupta
 */
+
 
 public class SyntheticDataASet2 {
 	 InsertionSort is = new InsertionSort();
@@ -20,7 +21,7 @@ public class SyntheticDataASet2 {
 	//function to generating Gaussian value    
 		 private static void getSyntheticDataSet(double[] arr)
 	{
-			 Random r =new Random();
+			 Random r =new SecureRandom();
 			 int average = 500;
 		        int standardDeviation = 100;
 

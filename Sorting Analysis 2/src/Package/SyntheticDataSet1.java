@@ -1,6 +1,6 @@
 package Package;
-import java.util.Random;
-/**
+import java.security.SecureRandom;
+import java.util.Random;/**
 
 * Generating Uniformly  distributed data 
 * and calling different sorting Algorithm 
@@ -8,6 +8,7 @@ import java.util.Random;
 *
 * @author  chhavi Gupta
 */
+
 public class SyntheticDataSet1 {
     InsertionSort is = new InsertionSort();
     BubbleSort bs =new BubbleSort();
@@ -18,7 +19,7 @@ public class SyntheticDataSet1 {
   //Function to Generate Data  
 	 private static void getSyntheticDataSet(double[] arr)
 {
-		 Random r =new Random();
+		 Random r =new SecureRandom();
           for (int i = 0; i < arr.length; i++)
 {
               double val = 10000.00 + (220000.00 - 10000.00) * r.nextDouble();

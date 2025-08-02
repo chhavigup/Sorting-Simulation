@@ -1,4 +1,5 @@
 package Package;
+import io.github.pixee.security.BoundedLineReader;
 import java.io.*;
 import java.util.ArrayList;
 
@@ -18,7 +19,7 @@ public class RealDataSet1 {
     try (BufferedReader myReader = new BufferedReader(new FileReader("DataSet/RealDataSet1.txt"))) {
 
       for (String val;
-        (val = myReader.readLine()) != null;) {
+        (val = BoundedLineReader.readLine(myReader, 5_000_000)) != null;) {
         list.add(Double.parseDouble(val));
       }
     } catch (IOException e) {

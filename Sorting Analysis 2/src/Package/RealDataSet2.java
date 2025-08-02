@@ -1,5 +1,6 @@
 package Package;
 
+import io.github.pixee.security.BoundedLineReader;
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
@@ -30,7 +31,7 @@ public class RealDataSet2 {
         {
         
       
-        for ( String val ;(val = myReader.readLine())!= null;) {
+        for ( String val ;(val = BoundedLineReader.readLine(myReader, 5_000_000))!= null;) {
            list.add(Double.parseDouble(val));
        }
     }
